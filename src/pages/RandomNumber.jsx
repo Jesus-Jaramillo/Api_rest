@@ -1,7 +1,8 @@
+import { Button } from "@mui/material";
 import { useRandom } from "../hooks/useRandom";
 import Navigates from "../routes/Navigates";
 
-function Example() {
+function RandomNumber() {
 
     const query = useRandom();
 
@@ -11,7 +12,7 @@ function Example() {
             <div>
                 <Navigates />
             </div>
-
+            <br />
             <div className="App App-header">
                 {
                     query.isFetching
@@ -23,15 +24,17 @@ function Example() {
                     !query.isLoading && query.isError && (<h3>{`${query.error}`}</h3>)
                 }
 
-                <button onClick={() => query.refetch()} disabled={query.isFetching}>
+                <br />
+
+                <Button onClick={() => query.refetch()} disabled={query.isFetching} variant="contained">
                     {
                         query.isFetching ? '...' : 'Nuevo número'
                     }
-                </button>
+                </Button>
 
             </div>
         </div>
     )
 }
 
-export default Example;
+export default RandomNumber;

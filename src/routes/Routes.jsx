@@ -1,27 +1,27 @@
 import { Route, Routes } from "react-router-dom";
-import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Register from "../pages/Register";
 import Grids from "../components/grids";
-import Example from "../pages/Example";
-import Pokemon from "../pages/Pokemon";
 import RickAndMorty from "../pages/rickAndMorty";
-// import ProductCard from "../components/ProductCard";
+import JoyridePage from "../pages/JoyridePage";
+import PokemonCard from "../pages/PokemonCard";
+import PokemonList from "../pages/PokemonList";
+import RandomNumber from "../pages/RandomNumber";
 
 
 function Ruts() {
   return (
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        {/* <Route path="/productcard" element={<ProductCard />} /> */}
+        <Route path="/pokemonCard" element={<PokemonCard />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
         <Route path="/grids" element={<Grids />} />
-        <Route path="/example" element={<Example />} />
-        <Route path="/pokemon" element={<Pokemon />} />
+        <Route path="/randomnumber" element={<RandomNumber />} />
+        <Route path="/pokemonList" element={<PokemonList />} />
         <Route path="/rick" element={<RickAndMorty />} />
+        <Route path="/joyride" element={<JoyridePage />} />
       </Routes>
   );
 }

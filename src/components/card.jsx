@@ -19,29 +19,6 @@ function BasicCard() {
     console.log('Funcionando correctamente')
   }
   return (
-    /*         <Container  className='cards' fluid="md">
-              <Row>
-                <Col >
-                  <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom className='align'>
-                    <TextField id="outlined-basic" label="E-mail" variant="outlined" type='email' />
-                  </Typography>
-    
-                  <Typography variant="h5" component="div" className='align'>
-                    <TextField id="outlined-basic" label="Password" variant="outlined" type='password' />
-                  </Typography>
-    
-                  <NavLink to="/register">
-                    <Button variant="outlined" color='primary'> Registrarse </Button>
-                  </NavLink>
-    
-                  <NavLink to="/about">
-                    <Button variant="outlined" color='success'>Iniciar Sesion</Button>
-                  </NavLink>
-    
-                </Col>
-              </Row>
-            </Container> */
-
     <div className='pad'>
       <div>
         <Box
@@ -52,8 +29,6 @@ function BasicCard() {
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom className='align'>
               <TextField id="outlined-basic" label="E-mail" variant="outlined" value={userName} type='email' onChange={({ target }) => setUserName(target.value)} />
             </Typography>
-
-            {/* <input type="text" label="E-mail" placeholder='UserName' value={userName} onChange={({ target }) => setUserName(target.value)} /> */}
             <br />
 
             <Typography variant="h5" component="div" className='align'>
@@ -61,11 +36,7 @@ function BasicCard() {
             </Typography>
 
             <br />
-
-            {/* <input type="password" label="Password" placeholder='Password' value={password} onChange={({ target }) => setPassword(target.value)} /> */}
-
-
-            <NavLink to="/about">
+            <NavLink to="/pokemoncard">
             <Button type='submit' variant="outlined" color='success'>Iniciar Sesion</Button>
             </NavLink>
 

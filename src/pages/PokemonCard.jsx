@@ -1,13 +1,13 @@
 import Navigates from "../routes/Navigates";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { useQuery } from "react-query";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import '../styles/Card.css';
 
-function About() {
+function PokemonCard() {
 
   const [pokemon, setPokemon] = useState();
   const [id, setId] = useState(1);
@@ -53,6 +53,7 @@ function About() {
 
   console.log(pokemon)
 
+  
 
   return (
     <div>
@@ -67,7 +68,7 @@ function About() {
         <div>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
-              <img src={pokemon.sprites.front_default} alt={pokemon.name} height={150} width={150}/>
+              <img className="imgPokemon" src={pokemon.sprites.front_default} alt={pokemon.name}/>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   ID: {pokemon.id}
@@ -93,4 +94,4 @@ function About() {
   );
 }
 
-export default About;
+export default PokemonCard;
